@@ -7,8 +7,8 @@ export async function createUserModel({ name, email, password }) {
 }
 
 export async function findUserById({ id }) {
-	return prisma.users.findUnique({ id });
+	return prisma.users.findUnique({ where: { id } });
 }
-export async function findUserByEmail({ id }) {
-	return prisma.users.findUnique({ id });
+export async function findUserByEmail({ email }) {
+	return prisma.users.findUnique({ where: { email } });
 }

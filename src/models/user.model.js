@@ -1,8 +1,8 @@
 import prisma from "../config/prisma.js";
 
-export async function createUserModel({ name, email, password }) {
+export async function createUserModel({ name, email, hashedPassword }) {
 	return prisma.users.create({
-		data: { name, email, hashedPassword: password },
+		data: { name, email, hashedPassword },
 	});
 }
 

@@ -11,7 +11,7 @@ export async function authorize(req, res, next) {
 		if (!token) return sendError(res, 401, "invalid token format");
 
 		const decoded = jwt.verify(token, process.env.JWT_SECRET);
-		const user = await findUserById(decoded.id);
+		const user = await findUserById({ id: decoded.id });
 		if (!user) return sendError(res, 401, "user not found");
 
 		delete user.hashedPassword;

@@ -8,6 +8,6 @@ import express from "express";
 const router = express.Router();
 
 router.get("/opportunities", authorize, getAllOpportunities);
-router.post("/opportunities/:id", authorize, getOpportunityById);
+router.get("/opportunities/:id", authorize, getOpportunityById);
 
 export default router;

@@ -1,9 +1,9 @@
 import prisma from "../config/prisma.js";
 
-export async function findAllOpportunities() {
+export async function findAllOpportunity() {
 	return prisma.opportunities.findMany();
 }
 
-export async function findAllOpportunitiesById({ id }) {
+export async function findOpportunityById({ id }) {
 	return prisma.opportunities.findUnique({ where: { id } });
 }

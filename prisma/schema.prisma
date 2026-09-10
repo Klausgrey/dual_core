@@ -43,6 +43,8 @@ model Application {
 
   users Users @relation(fields: [user_id], references: [id])
   opportunities Opportunities @relation(fields: [opportunities_id], references: [id])
+
+  @@unique([user_id, opportunities_id])
 }
 
 enum Status {

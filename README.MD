@@ -1,4 +1,4 @@
-# Internship Application System
+# CRUD System
 
 Backend API where users can create an account, view opportunities, apply, and track their application status.
 
@@ -64,8 +64,8 @@ npm run dev
 Create a new account.
 ```json
 {
-  "name": "Jane Doe",
-  "email": "jane@example.com",
+  "name": "Nicholas Upaka",
+  "email": "nick@example.com",
   "password": "password123"
 }
 ```
@@ -74,7 +74,7 @@ Create a new account.
 Log in and receive a JWT.
 ```json
 {
-  "email": "jane@example.com",
+  "email": "nick@example.com",
   "password": "password123"
 }
 ```
@@ -105,4 +105,3 @@ View the logged in user's own applications and their status (`PENDING`, `ACCEPTE
 ## Notes
 
 - Opportunities are pre-seeded, not created through the API. There is no admin role or opportunity-management endpoint, this is intentional and matches the task scope.
-- Application status defaults to `PENDING` and is set at the database level via a Prisma enum default.
